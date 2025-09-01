@@ -30,7 +30,7 @@ All files are self-contained: no databases, no external fonts, no CDNs.
 - Every push to `main` auto-builds:
   - `.zip` archive (GitHub Release)
   - `.warc` web archive
-  - SHA256 checksum file
+  - `SHA256SUMS.txt` integrity file
 - Archives are uploaded to:
   - GitHub Releases
   - Internet Archive (Wayback Machine)
@@ -39,7 +39,15 @@ All files are self-contained: no databases, no external fonts, no CDNs.
 
 ---
 
-## 🧭 Notes
-- Replace `<your-username>` and `<repo-name>` above.  
-- The `IPFS` and `Arweave` badges will update each time you push.  
-- The `Last Archived` badge updates automatically in CI/CD.
+## 🖥️ Tech for Resilience
+
+- **Content editing:** Markdown + Hugo/Jekyll → outputs static HTML.  
+- **Source control:** GitHub (mirrored to GitLab/Codeberg).  
+- **Hosting:** GitHub Pages + Cloudflare Pages (+ Netlify optional).  
+- **Archiving:** GitHub Actions → Internet Archive + IPFS + Arweave.  
+- **Offline:** ZIP + WARC burned to M-DISC, external HDD, archival USBs.  
+- **Verification:** `SHA256SUMS.txt` checks integrity.  
+
+    D --> Visitors
+    E --> Visitors
+    F --> Visitors
